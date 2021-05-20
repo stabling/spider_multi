@@ -1,0 +1,249 @@
+2021-05-20 17:02:28 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: splider_multi)
+2021-05-20 17:02:28 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.2.0, Python 3.7.10 (default, Feb 26 2021, 13:06:18) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1k  25 Mar 2021), cryptography 3.4.7, Platform Windows-10-10.0.19041-SP0
+2021-05-20 17:02:28 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'splider_multi',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 0.25,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': 'mylog.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'splider_multi.spiders',
+ 'SPIDER_MODULES': ['splider_multi.spiders']}
+2021-05-20 17:02:28 [scrapy.extensions.telnet] INFO: Telnet Password: ce4d1b317dfaac5a
+2021-05-20 17:02:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-05-20 17:02:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'splider_multi.randomAgentMiddleware.MyUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-05-20 17:02:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'splider_multi.randomAgentMiddleware.MyUserAgentMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-05-20 17:02:29 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-05-20 17:02:29 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\miniconda\envs\spider\lib\site-packages\twisted\internet\defer.py", line 1445, in _inlineCallbacks
+    result = current_context.run(g.send, result)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\crawler.py", line 87, in crawl
+    self.engine = self._create_engine()
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\crawler.py", line 101, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\core\engine.py", line 70, in __init__
+    self.scraper = Scraper(crawler)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\core\scraper.py", line 71, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\middleware.py", line 53, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\middleware.py", line 34, in from_settings
+    mwcls = load_object(clspath)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\utils\misc.py", line 61, in load_object
+    mod = import_module(module)
+  File "D:\miniconda\envs\spider\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "E:\myproject\splider_multi\splider_multi\pipelines.py", line 22, in <module>
+    import h5py
+ModuleNotFoundError: No module named 'h5py'
+2021-05-20 17:02:48 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: splider_multi)
+2021-05-20 17:02:48 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.2.0, Python 3.7.10 (default, Feb 26 2021, 13:06:18) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1k  25 Mar 2021), cryptography 3.4.7, Platform Windows-10-10.0.19041-SP0
+2021-05-20 17:02:48 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'splider_multi',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 0.25,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': 'mylog.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'splider_multi.spiders',
+ 'SPIDER_MODULES': ['splider_multi.spiders']}
+2021-05-20 17:02:48 [scrapy.extensions.telnet] INFO: Telnet Password: 669d63334e5ec7a4
+2021-05-20 17:02:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-05-20 17:02:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'splider_multi.randomAgentMiddleware.MyUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-05-20 17:02:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'splider_multi.randomAgentMiddleware.MyUserAgentMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-05-20 17:02:49 [scrapy.middleware] INFO: Enabled item pipelines:
+['splider_multi.pipelines.XsnvshencomPipeline']
+2021-05-20 17:02:49 [scrapy.core.engine] INFO: Spider opened
+2021-05-20 17:02:49 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-05-20 17:02:49 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-05-20 17:02:49 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\spiders\__init__.py", line 77, in start_requests
+    yield Request(url, dont_filter=True)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\http\request\__init__.py", line 25, in __init__
+    self._set_url(url)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\http\request\__init__.py", line 73, in _set_url
+    raise ValueError(f'Missing scheme in request url: {self._url}')
+ValueError: Missing scheme in request url: h
+2021-05-20 17:02:49 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-05-20 17:02:49 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.006002,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 5, 20, 9, 2, 49, 312638),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'start_time': datetime.datetime(2021, 5, 20, 9, 2, 49, 306636)}
+2021-05-20 17:02:49 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-05-20 17:04:41 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: splider_multi)
+2021-05-20 17:04:41 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.2.0, Python 3.7.10 (default, Feb 26 2021, 13:06:18) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1k  25 Mar 2021), cryptography 3.4.7, Platform Windows-10-10.0.19041-SP0
+2021-05-20 17:04:41 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'splider_multi',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 0.25,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': 'mylog.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'splider_multi.spiders',
+ 'SPIDER_MODULES': ['splider_multi.spiders']}
+2021-05-20 17:04:41 [scrapy.extensions.telnet] INFO: Telnet Password: 6acde52e0a311edf
+2021-05-20 17:04:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-05-20 17:04:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'splider_multi.randomAgentMiddleware.MyUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-05-20 17:04:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'splider_multi.randomAgentMiddleware.MyUserAgentMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-05-20 17:04:41 [scrapy.middleware] INFO: Enabled item pipelines:
+['splider_multi.pipelines.XsnvshencomPipeline']
+2021-05-20 17:04:41 [scrapy.core.engine] INFO: Spider opened
+2021-05-20 17:04:41 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-05-20 17:04:41 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-05-20 17:04:41 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\spiders\__init__.py", line 77, in start_requests
+    yield Request(url, dont_filter=True)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\http\request\__init__.py", line 25, in __init__
+    self._set_url(url)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\http\request\__init__.py", line 73, in _set_url
+    raise ValueError(f'Missing scheme in request url: {self._url}')
+ValueError: Missing scheme in request url: h
+2021-05-20 17:04:41 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-05-20 17:04:41 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.003,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 5, 20, 9, 4, 41, 933567),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'start_time': datetime.datetime(2021, 5, 20, 9, 4, 41, 930567)}
+2021-05-20 17:04:41 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-05-20 17:05:02 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: splider_multi)
+2021-05-20 17:05:02 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.2.0, Python 3.7.10 (default, Feb 26 2021, 13:06:18) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1k  25 Mar 2021), cryptography 3.4.7, Platform Windows-10-10.0.19041-SP0
+2021-05-20 17:05:02 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'splider_multi',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 0.25,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': 'mylog.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'splider_multi.spiders',
+ 'SPIDER_MODULES': ['splider_multi.spiders']}
+2021-05-20 17:05:02 [scrapy.extensions.telnet] INFO: Telnet Password: 52ecaa9f7c8ec398
+2021-05-20 17:05:02 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-05-20 17:05:02 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'splider_multi.randomAgentMiddleware.MyUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-05-20 17:05:02 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'splider_multi.randomAgentMiddleware.MyUserAgentMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-05-20 17:05:02 [scrapy.middleware] INFO: Enabled item pipelines:
+['splider_multi.pipelines.XsnvshencomPipeline']
+2021-05-20 17:05:02 [scrapy.core.engine] INFO: Spider opened
+2021-05-20 17:05:02 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-05-20 17:05:02 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-05-20 17:05:02 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\spiders\__init__.py", line 77, in start_requests
+    yield Request(url, dont_filter=True)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\http\request\__init__.py", line 25, in __init__
+    self._set_url(url)
+  File "D:\miniconda\envs\spider\lib\site-packages\scrapy\http\request\__init__.py", line 73, in _set_url
+    raise ValueError(f'Missing scheme in request url: {self._url}')
+ValueError: Missing scheme in request url: h
+2021-05-20 17:05:02 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-05-20 17:05:02 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.004,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 5, 20, 9, 5, 2, 884295),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'start_time': datetime.datetime(2021, 5, 20, 9, 5, 2, 880295)}
+2021-05-20 17:05:02 [scrapy.core.engine] INFO: Spider closed (finished)
